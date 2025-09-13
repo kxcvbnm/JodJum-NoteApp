@@ -25,12 +25,6 @@ if(process.env.NODE_ENV !== "production") {
 app.use(express.json())  // this middleware to parse JSON bodies: req.body
 app.use(rateLimiter)
 
-//our simple custom middleware
-// app.use((req, res, next) => {
-//     console.log(`Req method is ${req.method} and url is ${req.url}`);
-//     next();
-// })
-
 app.use("/api/notes", notesRoutes);
 
 if(process.env.NODE_ENV === "production") {

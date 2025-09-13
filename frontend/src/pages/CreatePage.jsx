@@ -42,21 +42,21 @@ const CreatePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-slate-300">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
-          <Link to={"/"} className="btn btn-ghost mb-6 text-primary">
+          <Link to={"/"} className="btn btn-ghost mb-6 text-gray-500 font-bold">
             <ArrowLeftIcon className="size-5" />
             Back to Notes
           </Link>
 
-          <div className="card bg-base-100">
+          <div className="card bg-base-100 border-4 border-solid border-primary">
             <div className="card-body">
-              <h2 className="card-title text-2xl mb-4 text-primary">Create New Note</h2>
+              <h2 className="card-title text-2xl mb-4 text-gray-500 font-bold">Create New Note</h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text text-primary">Title</span>
+                    <span className="label-text text-gray-500 font-bold">Title</span>
                   </label>
                   <input type="text" 
                          placeholder="Note Title" 
@@ -68,7 +68,7 @@ const CreatePage = () => {
 
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text text-primary">Content</span>
+                    <span className="label-text text-gray-500 font-bold">Content</span>
                   </label>
                   <textarea placeholder="Write your note here..."
                             className="textarea textarea-bordered h-32"
