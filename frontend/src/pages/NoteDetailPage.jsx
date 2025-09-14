@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams, Link } from 'react-router'
 import { LoaderIcon, ArrowLeftIcon, Trash2Icon } from 'lucide-react'
 import api from '../lib/axios'
+import ConfirmModal from '../components/ConfirmationModal'
+import { set } from 'mongoose'
 
 
 const NoteDetailPage = () => {
@@ -11,6 +13,7 @@ const NoteDetailPage = () => {
   const [note, setNote] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const navigate = useNavigate();  
 
@@ -32,7 +35,6 @@ const NoteDetailPage = () => {
   }, [id]);
 
   const handleDelete = async () => {
-    if(!window.confirm("Are you sure you want to delete this note?")) return;
     
     try {
       await api.delete(`/notes/${id}`);
@@ -42,6 +44,7 @@ const NoteDetailPage = () => {
       console.log("Error deleting note", error);
       toast.error("Failed to delete note");
     };
+    setShowModal(false);
   };
   
   const handleSave = async () => {
@@ -77,10 +80,14 @@ const NoteDetailPage = () => {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-6">
             <Link to="/" className="btn btn-ghost font-bold text-gray-500">
-              <ArrowLeftIcon className="h-5 w-5 text-gray-500" />
+              <ArrowLeftIcon className="h-5 w-5 text-gray-700" />
               Back to Notes
             </Link>
-            <button onClick={handleDelete} className="btn btn-error btn-outline">
+            <button onClick={(e) => {
+              e.preventDefault()
+              setShowModal(true);
+              }} 
+            className="btn btn-error btn-outline">
               <Trash2Icon className="h-5 w-5" />
                 Delete Note
             </button>
@@ -90,7 +97,7 @@ const NoteDetailPage = () => {
             <div className="card-body">
               <div className="form-control mb-4">
                 <label className="label">
-                  <span className="label-text font-bold text-gray-500">Title</span>
+                  <span className="label-text font-bold text-gray-700">Title</span>
                 </label>
                 <input 
                   type="text" 
@@ -103,7 +110,7 @@ const NoteDetailPage = () => {
 
               <div className="form-control mb-4">
                 <label className="label">
-                  <span className="label-text font-bold text-gray-500">Content</span>
+                  <span className="label-text font-bold text-gray-700">Content</span>
                 </label>
                 <textarea
                   placeholder="Write your note here..."
@@ -122,6 +129,15 @@ const NoteDetailPage = () => {
           </div>
         </div>  
       </div>
+
+    <ConfirmModal
+        isOpen={showModal}
+        title="Confirm Delete"
+        message="Are you sure you want to delete this note?"
+        onConfirm={() => handleDelete(note._id)}
+        onCancel={() => setShowModal(false)}
+    />
+
     </div>
   );
 };

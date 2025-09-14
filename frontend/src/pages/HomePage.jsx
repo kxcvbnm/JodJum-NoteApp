@@ -7,6 +7,7 @@ import RateLimitedUI from '../components/RateLimitedUI'
 import NoteCard from '../components/NoteCard'
 import api from '../lib/axios'
 import NotesNotFound from '../components/NotesNotFound'
+import ConfirmModal from '../components/ConfirmationModal'
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);

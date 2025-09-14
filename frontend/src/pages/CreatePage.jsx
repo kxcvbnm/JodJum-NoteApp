@@ -52,11 +52,16 @@ const CreatePage = () => {
 
           <div className="card bg-base-100 border-4 border-solid border-primary">
             <div className="card-body">
-              <h2 className="card-title text-2xl mb-4 text-gray-500 font-bold">Create New Note</h2>
+              <h2 className="card-title justify-center text-3xl mb-4 font-bold">
+                <span className="bg-primary text-gray-700 border border-primary rounded-xl px-4 py-1">
+                  Create New Note
+                </span>
+              </h2>
+
               <form onSubmit={handleSubmit}>
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text text-gray-500 font-bold">Title</span>
+                    <span className="label-text text-gray-700 font-bold">Title</span>
                   </label>
                   <input type="text" 
                          placeholder="Note Title" 
@@ -68,7 +73,7 @@ const CreatePage = () => {
 
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text text-gray-500 font-bold">Content</span>
+                    <span className="label-text text-gray-700 font-bold">Content</span>
                   </label>
                   <textarea placeholder="Write your note here..."
                             className="textarea textarea-bordered h-32"
@@ -78,7 +83,7 @@ const CreatePage = () => {
                 </div>
 
                 <div className="card-actions justify-center">
-                  <button type="submit" className="btn btn-primary" disabled={loading}>
+                  <button type="submit" className="btn btn-primary text-gray-700" disabled={loading}>
                     {loading ? "Creating..." : "Create Note"}
                   </button>
                 </div>
