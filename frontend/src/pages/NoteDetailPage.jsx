@@ -5,8 +5,6 @@ import { useNavigate, useParams, Link } from 'react-router'
 import { LoaderIcon, ArrowLeftIcon, Trash2Icon } from 'lucide-react'
 import api from '../lib/axios'
 import ConfirmModal from '../components/ConfirmationModal'
-import { set } from 'mongoose'
-
 
 const NoteDetailPage = () => {
 
