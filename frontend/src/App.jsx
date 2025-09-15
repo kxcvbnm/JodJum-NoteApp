@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="relative w-full h-full">
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 
-      bg-slate-300" />
+      bg-base-300" />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />

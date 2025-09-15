@@ -42,7 +42,7 @@ const CreatePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-300">
+    <div className="min-h-screen bg-base-300">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <Link to={"/"} className="btn btn-ghost mb-6 text-gray-500 font-bold">
