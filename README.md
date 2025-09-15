@@ -29,16 +29,20 @@
 ```text
 JodJum-NoteApp/
 ├─ backend/
-│ ├─ routes/
-│ ├─ controllers/
-│ ├─ models/
-│ ├─ server/ (app setup)
-│ └─ package.json
+| ├─ src/
+| | ├─ config/
+| | ├─ middleware/
+│ | ├─ routes/
+│ | ├─ controllers/
+│ | ├─ models/
+│ | ├─ server/ (app setup)
+│ | └─ package.json
 ├─ frontend/
-│ ├─ components/
-│ ├─ pages/
-│ ├─ assets/ (styles)
-│ └─ package.json
+| ├─ src/
+│ | ├─ components/
+│ | ├─ pages/
+│ | ├─ lib/
+│ | └─ package.json
 ├─ .gitignore
 └─ README.md
 
