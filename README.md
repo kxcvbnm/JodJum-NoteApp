@@ -28,16 +28,17 @@
 
 JodJum-NoteApp/
 ├─ backend/
-│ ├─ routes/
-│ ├─ controllers/
-│ ├─ models/
-│ ├─ server / app setup
-│ └─ package.json
+│  ├─ routes/
+│  ├─ controllers/
+│  ├─ models/
+│  ├─ server/ (app setup)
+│  └─ package.json
 ├─ frontend/
-│ ├─ components /
-│ ├─ pages /
-│ ├─ assets / styles /
-│ └─ package.json
+│  ├─ components/
+│  ├─ pages/
+│  ├─ assets/ (styles)
+│  └─ package.json
 ├─ .gitignore
 └─ README.md
+
 
