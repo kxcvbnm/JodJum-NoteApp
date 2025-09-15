@@ -26,20 +26,6 @@
 
 ## 📁 Project Structure
 
-JodJum-NoteApp/
-├─ backend/
-│ ├─ routes/
-│ ├─ controllers/
-│ ├─ models/
-│ ├─ server/ (app setup)
-│ └─ package.json
-├─ frontend/
-│ ├─ components/
-│ ├─ pages/
-│ ├─ assets/ (styles)
-│ └─ package.json
-├─ .gitignore
-└─ README.md
 ```text
 JodJum-NoteApp/
 ├─ backend/
