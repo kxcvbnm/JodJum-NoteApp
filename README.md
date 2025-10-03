@@ -45,5 +45,12 @@ JodJum-NoteApp/
 │ | └─ package.json
 ├─ .gitignore
 └─ README.md
+```
+---
 
+# Website Image
+
+![Home Page](images/main_page.png)
+![Create Page](images/create_page.png)
+![View/Edit Page](images/view_page.png)
 
